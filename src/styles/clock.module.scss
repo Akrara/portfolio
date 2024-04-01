@@ -1,0 +1,19 @@
+#clockWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    color: #DDE6ED;
+    gap: 1rem;
+    font-size: 0.8rem;
+    flex-grow: 0.4;
+
+    &:hover {
+        background-color:inherit;
+        cursor: default;
+    }
+    &.clockWrapperVertical {
+        justify-content: center;
+        align-items: flex-end;
+    }
+}

@@ -5,4 +5,30 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  font-size: 20px;
+  z-index: 0;
+  position: relative;
+  top: 0;
+}
+
+.mainWrapper {
+  width: 100%;
+  position: relative;
+  height: 100%;
+
+  &.mainWrapperVertical {
+    display: flex;
+  }
+}
+
+.mainBackground {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 400vh;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: repeat;
 }
