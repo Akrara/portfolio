@@ -8,6 +8,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Nav from "@/components/Nav";
+import HomeLayout from "@/components/HomeLayout";
 
 export default function Home() {
   const wrapperElement = useRef<HTMLDivElement>(null);
@@ -24,6 +25,7 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.scrollTo(0, 0);
     }
   }, []);
 
@@ -35,17 +37,16 @@ export default function Home() {
         <img ref={backgroundElement} src={"/bg.png"} alt="background" className={styles.mainBackground} />
       </div>
 
-      <div className={clsx(styles.mainWrapper, navOrientation === "vertical" && styles.mainWrapperVertical)} ref={wrapperElement}>
-        <Nav setPage={setPage} orientation={navOrientation} setOrientation={setNavOrientation} />
+      <div className={clsx(styles.mainWrapper, navOrientation === "vertical" &&
+       styles.mainWrapperVertical)} ref={wrapperElement}>
+        <Nav setPage={setPage} orientation={navOrientation as "horizontal"|"vertical"} setOrientation={setNavOrientation} />
 
         <main className={styles.main}>
-          {page === "home" ? <>
-          <div style={{height:"1300px"}}>hello</div>
-          </> : null}
+          {page === "home" ? <HomeLayout /> : null}
           {page === "about" ? <div>hello</div> : null}
         </main>
-
       </div>
+
     </>
   );
 }

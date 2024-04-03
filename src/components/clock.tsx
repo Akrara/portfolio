@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/styles/clock.module.scss';
+import styles from '@/styles/Clock.module.scss';
 import clsx from 'clsx';
 import { useEffect, useState } from "react";
 

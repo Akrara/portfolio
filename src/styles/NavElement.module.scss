@@ -1,0 +1,41 @@
+@keyframes activatedRect {
+    0% {
+        background-color: rgba(255, 255, 255, 0.25);
+        clip-path: ellipse(0% 0% at 50% 50%);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.3);
+        clip-path: ellipse(50% 50% at 50% 50%);
+    
+    }
+    75% {
+        background-color: rgba(255, 255, 255, 0.35);
+        clip-path: ellipse(65% 65% at 50% 50%);
+    }
+    85% {
+        background-color: rgba(255, 255, 255, 0.3);
+        clip-path: ellipse(100% 100% at 50% 50%);
+    }
+    100% {
+        background-color: rgba(0,0,0,0);
+        clip-path: ellipse(100% 100% at 50% 50%);
+    }
+}
+
+.navElementWrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    &.activated {
+        animation: activatedRect 0.4s linear;
+    }
+}

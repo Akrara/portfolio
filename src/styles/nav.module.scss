@@ -33,6 +33,7 @@
         box-sizing: border-box;
         transition: background-color 0.2s;
         display:flex;
+        gap:1rem;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -42,6 +43,30 @@
         cursor: pointer;
         &:hover {
             background-color: #272591;
+        }
+    }
+}
+.inputWrapper {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+    border-radius: 10px;
+    height:1.2rem;
+    width:3rem;
+    background-color:#86B6F6;
+    cursor: pointer;
+    position: relative;
+    >.inputThumb {
+        height: calc(1.2rem - 4px);
+        width: calc(1.2rem - 4px);
+        border-radius: 50%;
+        background-color: #070F2B;
+        transition: all 0.5s ease-in-out;
+        position: absolute;
+        left: 2px;
+        &.inputThumbActive {
+            left: calc(100% - 1.2rem + 2px);
         }
     }
 }
