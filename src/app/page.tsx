@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import HomeLayout from "@/components/HomeLayout";
+import AboutLayout from "@/components/AboutLayout";
 
 export default function Home() {
   const wrapperElement = useRef<HTMLDivElement>(null);
@@ -38,12 +39,12 @@ export default function Home() {
       </div>
 
       <div className={clsx(styles.mainWrapper, navOrientation === "vertical" &&
-       styles.mainWrapperVertical)} ref={wrapperElement}>
-        <Nav setPage={setPage} orientation={navOrientation as "horizontal"|"vertical"} setOrientation={setNavOrientation} />
+        styles.mainWrapperVertical)} ref={wrapperElement}>
+        <Nav setPage={setPage} orientation={navOrientation as "horizontal" | "vertical"} setOrientation={setNavOrientation} />
 
         <main className={styles.main}>
           {page === "home" ? <HomeLayout /> : null}
-          {page === "about" ? <div>hello</div> : null}
+          {page === "about" ? <AboutLayout /> : null}
         </main>
       </div>
 

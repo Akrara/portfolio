@@ -80,6 +80,7 @@ body {
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   position: relative;
+  overflow-x:hidden;
 }
 
 a {
@@ -91,4 +92,7 @@ a {
   html {
     color-scheme: dark;
   }
+}
+h4{
+  font-size:2rem;
 }

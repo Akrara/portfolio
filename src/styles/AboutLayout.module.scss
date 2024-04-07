@@ -1,0 +1,12 @@
+.wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top:6rem;
+    padding-bottom:6rem;
+    padding-left:12rem;
+    padding-right:12rem;
+    justify-content: space-between;
+    width:100%;
+    gap:4rem;
+}

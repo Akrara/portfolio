@@ -14,6 +14,16 @@ $textOutline :-1px -1px 0 rgba(0, 0, 0,0.4),
     }
 }
 .layoutWrapper {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:4rem;
+    justify-content:space-between;
+    align-items: center;
+    min-height:200vh;
+    width:100vw;
+}
+.cardWrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -22,7 +32,7 @@ $textOutline :-1px -1px 0 rgba(0, 0, 0,0.4),
     opacity: 0;
     line-height: 3.2rem;
     top:-200px;
-    &.layoutWrapperActive {
+    &.cardWrapperActive {
         opacity: 1;
         top:0;
     }
@@ -34,7 +44,7 @@ $textOutline :-1px -1px 0 rgba(0, 0, 0,0.4),
     left:0;
     width:100%;
     height:100%;
-    background-color: #1B1A55;
+    background-color: #121c4f;
     z-index: -1;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     border-radius: 15px;
@@ -45,7 +55,7 @@ $textOutline :-1px -1px 0 rgba(0, 0, 0,0.4),
     }
 }
 .leadingP {
-    color: #7FC7D9;
+    color: #2de251;
     text-shadow: $textOutline;
 }
 .title {
@@ -55,4 +65,22 @@ $textOutline :-1px -1px 0 rgba(0, 0, 0,0.4),
     font-size:3rem;
     color: #DDE6ED;
     text-shadow: $textOutline;
+}
+.quoteLayout {
+    width:100%;
+    background-color:#232323;
+    border: 2px solid #997000;
+    display:flex;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    padding: 2rem;
+    opacity: 0;
+    position:relative;
+    visibility: hidden;
+    transform:translateX(100%);
+    &.quoteLayoutActive {
+        transform:translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
 }

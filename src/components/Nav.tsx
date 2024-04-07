@@ -27,7 +27,7 @@ export default function Nav(props: { setPage: Function, orientation: "horizontal
             <NavElement setPage={props.setPage} page="about">About Me</NavElement>
             <NavElement setPage={props.setPage} page="projects">My skills and projects</NavElement>
             <NavElement setPage={props.setPage} page="contact">Contact Me</NavElement>
-            <div onClick={(e) => toggleSwitch(e, props.setOrientation)}>Switch to vertical nav <ToggleInput checked={props.orientation === "vertical"} /></div>
+            <div className={clsx(props.orientation === "vertical" && styles.inputElement)} onClick={(e) => toggleSwitch(e, props.setOrientation)}>Switch to vertical nav <ToggleInput checked={props.orientation === "vertical"} /></div>
             <Clock orientation={props.orientation} />
         </nav>
     )
